@@ -2,20 +2,9 @@ package main
 
 import "fmt"
 
-func add(a int, b int) int {
-	return a + b
-}
-
 func main() {
-	defer fmt.Println("【程序结束】")
-
-	for i := 1; i <= 3; i++ {
-		if i%2 == 0 {
-			fmt.Println(i, "是偶数")
-		} else {
-			fmt.Println(i, "是奇数")
-		}
+	primes := []int{2, 3, 5, 7, 11, 13}
+	for i, prime := range primes {
+		fmt.Printf("Prime %d: %d\n", i, prime)
 	}
-
-	fmt.Println("3 + 5 =", add(3, 5))
 }
